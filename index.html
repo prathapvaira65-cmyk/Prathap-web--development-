@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Tracker Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🧠 Mood Tracker Pro</h1>
+      <p>Track your emotional wellness day by day</p>
+    </header>
+
+    <section class="tracker">
+      <h2>Today's Mood</h2>
+      <form id="moodForm">
+        <div class="mood-options">
+          <button type="button" class="mood-btn">😊</button>
+          <button type="button" class="mood-btn">😐</button>
+          <button type="button" class="mood-btn">😢</button>
+          <button type="button" class="mood-btn">😠</button>
+        </div>
+        <input type="hidden" id="selectedMood" />
+        <textarea id="note" placeholder="Write a short note..."></textarea>
+        <button type="submit">Save Mood</button>
+      </form>
+    </section>
+
+    <section class="history">
+      <h2>📅 Mood History</h2>
+      <input type="date" id="datePicker" />
+      <ul id="moodList"></ul>
+    </section>
+
+    <section class="chart-section">
+      <h2>📈 Weekly Mood Overview</h2>
+      <canvas id="moodChart"></canvas>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
